@@ -7,6 +7,7 @@ import axios from "axios"
             <div className="show">
                 <div className="cards">
                     <h1>United States</h1>
+                    <i className="wi wi-day-sunny display-1"></i>
                 </div>
             </div>
         );

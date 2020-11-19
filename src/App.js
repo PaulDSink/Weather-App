@@ -5,6 +5,7 @@ import Home from './components/Home/Home'
 import Header from './components/Header/Header'
 import Show from './components/Show/Show'
 import axios from 'axios'
+import 'weather-icons/css/weather-icons.min.css'
 
 
 export default class App extends Component {
