@@ -7,7 +7,7 @@ export class WeatherShowpage extends Component {
     render() {
         return (
             <div>
-                this is a show page
+                <h1>this is a show page</h1>
             </div>
         )
     }
