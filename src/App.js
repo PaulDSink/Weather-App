@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {Route, Link, Switch, Redirect} from 'react-router-dom'
 import './App.css';
+import Home from './components/Home/Home'
 
 
 export default class App extends Component {
