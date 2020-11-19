@@ -2,8 +2,9 @@ import React, { Component } from 'react'
 import {Route, Link, Switch, Redirect} from 'react-router-dom'
 // import './App.css';
 import Home from './components/Home/Home'
-import Header from './components/Header/Header';
-import axios from 'axios';
+import Header from './components/Header/Header'
+import Show from './components/Show/Show'
+import axios from 'axios'
 
 
 export default class App extends Component {
@@ -26,7 +27,12 @@ export default class App extends Component {
     return (
       <div className="App">
         <Header />
-        <h1>App</h1>
+        <main>
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/show" exact component={Show} />
+          </Switch>
+        </main>
       </div>
     );
   }
