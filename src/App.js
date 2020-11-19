@@ -2,8 +2,9 @@ import React, { Component } from 'react'
 import {Route, Link, Switch, Redirect} from 'react-router-dom'
 // import './App.css';
 import Home from './components/Home/Home'
-import Header from './components/Header/Header';
-import axios from 'axios';
+import Header from './components/Header/Header'
+import Show from './components/Show/Show'
+import axios from 'axios'
 
 
 export default class App extends Component {
@@ -13,6 +14,39 @@ export default class App extends Component {
       weather: [],
       forecast: '',
       location: '',
+       cities: [
+        {
+          name: 'New York City',
+          state: 'NY',
+        }, {
+          name: 'Los Angeles',
+          state: 'CA',
+        }, {
+          name: 'Chicago',
+          state: 'IL',
+        }, {
+          name: 'Houston',
+          state: 'TX',
+        }, {
+          name: 'Phoenix',
+          state: 'AZ',
+        }, {
+          name: 'Philadelphia',
+          state: 'PA',
+        }, {
+          name: 'San Antonio',
+          state: 'TX',
+        }, {
+          name: 'San Diego',
+          state: 'CA',
+        }, {
+          name: 'Dallas',
+          state: 'TX',
+        }, {
+          name: 'San Jose',
+          state: 'CA',
+        }
+      ],
     }
   }
 componentDidMount = ()=>{
@@ -33,7 +67,13 @@ componentDidMount = ()=>{
     return (
       <div className="App">
         <Header />
-        <h1>App</h1>
+        <main>
+          <Switch>
+            <Route exact path="/" render={props=>
+              <Home cities={this.state.cities}/> }/>
+            <Route exact path="/show" component={Show} />
+          </Switch>
+        </main>
       </div>
     );
   }
