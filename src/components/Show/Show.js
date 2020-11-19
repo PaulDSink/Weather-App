@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import {Route, Link, Switch, Redirect} from 'react-router-dom'
 import axios from axios
 
-export class WeatherShowpage extends Component {
+export default class Show extends Component {
 
     render() {
         return (
@@ -12,5 +12,3 @@ export class WeatherShowpage extends Component {
         )
     }
 }
-
-export default WeatherShowpage
