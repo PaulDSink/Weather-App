@@ -1,14 +1,12 @@
 import React, { Component } from 'react'
 
-export class WeatherShowpage extends Component {
+export default class Show extends Component {
 
     render() {
         return (
-            <div>
+            <div className="Show">
                 this is a show page
             </div>
         )
     }
 }
-
-export default WeatherShowpage
