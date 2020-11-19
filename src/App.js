@@ -11,10 +11,17 @@ export default class App extends Component {
     super();
     this.state = {
       weather: [],
+      forecast: '',
+      location: '',
     }
   }
-  componentDidMount = async()=>{
-    let response = await axios.get(`http://api.weatherapi.com/v1/current.json?key=383bba998c9840e5b57160359201911&q=Chicago`);
+componentDidMount = ()=>{
+  this.getWeather();
+};
+
+
+  getWeather = async()=>{
+    let response = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=383bba998c9840e5b57160359201911&q=new_York&days=7`);
 
       
       this.setState({weather: response});
