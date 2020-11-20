@@ -11,17 +11,12 @@ export default class HomeSearch extends Component {
   render() {
     return (
       <div className="search">
-          <form onSubmit={ (event)=>{
-              event.preventDefault();
-            //   console.log(event.target.cityname.value);
-              this.props.inputUpdated(event.target.cityname.value)
-          }}>
               <label htmlFor='cityname'>CITY</label>
-              <input className='search' type='input'name='cityname' />
-              <button className="myButton" type="submit">Search</button>    
-        </form>
-                
-        
+              <input className='search' type='input'name='cityname' onChange={this.props.inputUpdated}/>
+              <button className="myButton" type="submit" onClick={this.props.getWeather}>Update</button>
+              <Link to="/show">
+                Search
+                </Link>
       </div>
     );
   }
