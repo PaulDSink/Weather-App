@@ -14,7 +14,7 @@ export default class HomeSearch extends Component {
               <label htmlFor='cityname'>CITY</label>
               <input className='search' type='input'name='cityname' onChange={this.props.inputUpdated}/>
               <button className="myButton" type="submit" onClick={this.props.getWeather}>Update</button>
-              <Link to="/show">
+              <Link to={"/show/" + this.props.location.split(' ').join('_')}>
                 Search
                 </Link>
       </div>
