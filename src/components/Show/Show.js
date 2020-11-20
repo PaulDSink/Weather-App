@@ -3,6 +3,15 @@ import {Route, Link, Switch, Redirect} from 'react-router-dom'
 import './Show.css'
 
 export default class Show extends Component {
+    constructor() {
+        super()
+
+    }
+    componentWillMount = async() => {
+        this.props.getWeather()
+    }
+    
+
     render(){
         console.log('show page')
         console.log(this.props)
@@ -14,6 +23,9 @@ export default class Show extends Component {
                 </h3>
             )
         }
+        
+
+
     return (
         <div className="container">
             <div className="cards">

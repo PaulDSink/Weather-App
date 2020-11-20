@@ -85,7 +85,6 @@ getWeather = async()=>{
   }
   }
 
-
   render() {
     return (
       <div className="App">
@@ -96,7 +95,7 @@ getWeather = async()=>{
 
               <Home cities={this.state.cities} inputUpdated={this.inputUpdated} getWeather={this.getWeather} updateLocation={this.updateLocation}/> }/>
             <Route exact path="/show" render={props=>
-            <Show data={this.state.weather}/> }/>
+            <Show data={this.state.weather} getWeather={this.getWeather}/> }/>
 {/* 
                <Home cities={this.state.cities} location={this.state.location} inputUpdated={this.inputUpdated} getWeather={this.getWeather}/> }/>
              <Route exact path="/show/:city" render={props=>
