@@ -19,7 +19,7 @@ export default class Show extends Component {
             <div className="cards">
                 <h1>{this.props.data.data.location.name}, {this.props.data.data.location.region}</h1>
                 <h5 className="py-4">
-                    <i class={`wi ${this.props.weatherIcon}`}></i>
+                    <i className={`wi ${this.props.weatherIcon}`}></i>
                 </h5>
                 <h1 className="py-2">{this.props.data.data.current.temp_f}&deg;</h1>
 
