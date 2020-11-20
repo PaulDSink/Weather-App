@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {Route, Link, Switch, Redirect} from 'react-router-dom'
+import HomeSearch from '../HomeSearch/HomeSearch'
 
 export default class Home extends Component {
 
@@ -13,6 +14,7 @@ export default class Home extends Component {
         })
         return (
             <div className="Home">
+                <HomeSearch inputUpdated={this.props.inputUpdated} getWeather={this.props.getWeather}/>
                 <h3>Popular Cities:</h3>
                 <ul className="city-list">
                     {cityList}

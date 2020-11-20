@@ -13,6 +13,7 @@ export default class App extends Component {
   constructor(){
     super();
     this.state = {
+      show: false,
       weather: [],
       forecast: '',
       location: '',
@@ -56,28 +57,24 @@ componentDidMount = ()=>{
   this.getWeather();
 };
 
-inputUpdated(e){
-  const value = e;
+inputUpdated(event){
+  const value = event.target.value;
   console.log(value)
 
   this.setState({ location: value})
   console.log(this.state.location)
-  this.getWeather();
-  
 }
 
-  getWeather = async()=>{
-    if(this.state.location === ''){
-      let response = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=383bba998c9840e5b57160359201911&q=new_York&days=7`);
-      
-    }
-      let response = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=383bba998c9840e5b57160359201911&q=${this.state.location}&days=7`);
-      
-
-      
-      this.setState({weather: response});
-      console.log(response)
-    }
+getWeather = async()=>{
+  if(this.state.location === ''){
+    let response = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=383bba998c9840e5b57160359201911&q=new_York&days=7`);
+    
+  }
+    let response = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=383bba998c9840e5b57160359201911&q=${this.state.location}&days=7`);
+    
+    this.setState({weather: response});
+    console.log(response)
+  }
 
 
   render() {
@@ -87,11 +84,10 @@ inputUpdated(e){
         <main>
           <Switch>
             <Route exact path="/" render={props=>
-              <Home cities={this.state.cities}/> }/>
+              <Home cities={this.state.cities} inputUpdated={this.inputUpdated} getWeather={this.getWeather}/> }/>
             <Route exact path="/show" render={props=>
             <Show data={this.state.weather}/> }/>
           </Switch>
-          <HomeSearch inputUpdated={this.inputUpdated}/>
         </main>
       </div>
     );

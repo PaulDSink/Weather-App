@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
+import {Route, Link, Switch, Redirect} from 'react-router-dom'
 
 export default class Show extends Component {
     render(){
+        console.log('show page')
         console.log(this.props)
         const minmaxTemp=(min,max) => {
             return(
@@ -13,9 +15,9 @@ export default class Show extends Component {
         }
     return (
         <div className="container">
-            {/* <div className="cards">
-                <h1>{this.props.data.location.name}, {this.props.data.location.region}</h1>
-                <h5 className="py-4">
+            <div className="cards">
+                <h1>{this.props.data.data.location.name}, {this.props.data.data.location.region}</h1>
+                {/* <h5 className="py-4">
                     <i class={`wi ${this.props.weatherIcon}`}></i>
                 </h5>
                 <h1 className="py-2">{this.props.data.data.current.temp_f}&deg;</h1>
@@ -23,8 +25,9 @@ export default class Show extends Component {
                 {minmaxTemp(this.props.data.data.forecast.forecastday[0].day.maxtemp_f,
                 this.props.data.data.forecast.forecastday[0].day.mintemp_f)}
 
-                <h4 className="py-3">{this.props.description}</h4>
-            </div> */}
+                <h4 className="py-3">{this.props.description}</h4> */}
+                <Link to="/">Home Page</Link>
+            </div>
         </div>
     )
     }
