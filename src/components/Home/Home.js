@@ -8,7 +8,7 @@ export default class Home extends Component {
         const cityList = this.props.cities.map((city)=>{
             return (
                 <Link to="/show/">
-                    <p className="city">{city.name}, {city.state}</p>
+                    <p className="city" onClick={this.props.updateLocation}>{city.name}, {city.state}</p>
                 </Link>
             )
         })

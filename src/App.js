@@ -56,6 +56,13 @@ export default class App extends Component {
 componentDidMount = ()=>{
   this.getWeather();
 };
+updateLocation =(name)=>{
+  console.log(name.target.innerHTML)
+  let city = name.target.innerHTML;
+  this.setState({ location: city })
+  this.getWeather();
+  console.log(this.state.weather)
+}
 
 inputUpdated(event){
   const value = event.target.value;
@@ -86,7 +93,7 @@ getWeather = async()=>{
         <main>
           <Switch>
             <Route exact path="/" render={props=>
-              <Home cities={this.state.cities} inputUpdated={this.inputUpdated} getWeather={this.getWeather}/> }/>
+              <Home cities={this.state.cities} inputUpdated={this.inputUpdated} getWeather={this.getWeather} updateLocation={this.updateLocation}/> }/>
             <Route exact path="/show" render={props=>
             <Show data={this.state.weather}/> }/>
           </Switch>
