@@ -68,12 +68,14 @@ inputUpdated(event){
 getWeather = async()=>{
   if(this.state.location === ''){
     let response = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=383bba998c9840e5b57160359201911&q=new_York&days=7`);
-    
-  }
-    let response = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=383bba998c9840e5b57160359201911&q=${this.state.location}&days=7`);
-    
     this.setState({weather: response});
     console.log(response)
+    
+  }else {
+    let response = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=383bba998c9840e5b57160359201911&q=${this.state.location}&days=7`);
+    this.setState({weather: response});
+    console.log(response)
+  }
   }
 
 
