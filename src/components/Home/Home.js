@@ -7,8 +7,13 @@ export default class Home extends Component {
     render() {
         const cityList = this.props.cities.map((city)=>{
             return (
-                <Link to={"/show/" + city.name.split(' ').join('_')}>
-                    <p className="city">{city.name}, {city.state}</p>
+
+                <Link to="/show/">
+                    <p className="city" onClick={this.props.updateLocation}>{city.name}, {city.state}</p>
+
+//                 <Link to={"/show/" + city.name.split(' ').join('_')}>
+//                     <p className="city">{city.name}, {city.state}</p>
+
                 </Link>
             )
         })
