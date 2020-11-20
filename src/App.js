@@ -6,6 +6,7 @@ import Header from './components/Header/Header'
 import Show from './components/Show/Show'
 import axios from 'axios'
 import 'weather-icons/css/weather-icons.min.css'
+import HomeSearch from './components/HomeSearch/HomeSearch';
 
 
 export default class App extends Component {
@@ -49,14 +50,29 @@ export default class App extends Component {
         }
       ],
     }
+    this.inputUpdated = this.inputUpdated.bind(this);
   }
 componentDidMount = ()=>{
   this.getWeather();
 };
 
+inputUpdated(e){
+  const value = e;
+  console.log(value)
+
+  this.setState({ location: value})
+  console.log(this.state.location)
+  this.getWeather();
+  
+}
 
   getWeather = async()=>{
-    let response = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=383bba998c9840e5b57160359201911&q=new_York&days=7`);
+    if(this.state.location === ''){
+      let response = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=383bba998c9840e5b57160359201911&q=new_York&days=7`);
+      
+    }
+      let response = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=383bba998c9840e5b57160359201911&q=${this.state.location}&days=7`);
+      
 
       
       this.setState({weather: response});
@@ -74,6 +90,7 @@ componentDidMount = ()=>{
               <Home cities={this.state.cities}/> }/>
             <Route exact path="/show" component={Show} />
           </Switch>
+          <HomeSearch inputUpdated={this.inputUpdated}/>
         </main>
       </div>
     );
