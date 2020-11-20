@@ -88,7 +88,8 @@ inputUpdated(e){
           <Switch>
             <Route exact path="/" render={props=>
               <Home cities={this.state.cities}/> }/>
-            <Route exact path="/show" component={Show} />
+            <Route exact path="/show" render={props=>
+            <Show data={this.state.weather}/> }/>
           </Switch>
           <HomeSearch inputUpdated={this.inputUpdated}/>
         </main>
