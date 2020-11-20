@@ -1,4 +1,23 @@
 .container{
     text-align: center;
   }
-  
+body{
+  background-image: url("https://lh3.googleusercontent.com/proxy/xItfQNux8gqz4_DAU6WA1LNQdGCFDN-GbgtxuU8wGmum5d3xBjVll4uww6oH--IaxUaRxTYASCk-oNJkFzojkt0mKHTPTW2VH2b1cSboVzksK7R19MPeAKrheTxGZ2inKJMWwo2m");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight:bold;
+  vertical-align: middle;
+  color: white;
+}
+.cards{
+  background-color: black;
+  height: 600px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 50px;
+}
