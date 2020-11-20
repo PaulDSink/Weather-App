@@ -17,7 +17,7 @@ export default class Show extends Component {
         <div className="container">
             <div className="cards">
                 <h1>{this.props.data.data.location.name}, {this.props.data.data.location.region}</h1>
-                {/* <h5 className="py-4">
+                <h5 className="py-4">
                     <i class={`wi ${this.props.weatherIcon}`}></i>
                 </h5>
                 <h1 className="py-2">{this.props.data.data.current.temp_f}&deg;</h1>
@@ -25,7 +25,8 @@ export default class Show extends Component {
                 {minmaxTemp(this.props.data.data.forecast.forecastday[0].day.maxtemp_f,
                 this.props.data.data.forecast.forecastday[0].day.mintemp_f)}
 
-                <h4 className="py-3">{this.props.description}</h4> */}
+                <h4 className="py-3">{this.props.data.data.current.condition.text} </h4>
+                <img className="py-3" src={this.props.data.data.current.condition.icon} ></img>
                 <Link to="/">Home Page</Link>
             </div>
         </div>
