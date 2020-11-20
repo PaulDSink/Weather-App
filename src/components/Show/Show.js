@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {Route, Link, Switch, Redirect} from 'react-router-dom'
+import './Show.css'
 
 export default class Show extends Component {
     render(){
