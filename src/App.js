@@ -85,6 +85,7 @@ inputUpdated(event){
   console.log(this.state.location)
 }
 
+
 getWeather = async()=>{
   if(this.state.location === ''){
     let response = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=383bba998c9840e5b57160359201911&q=new_York&days=7`);

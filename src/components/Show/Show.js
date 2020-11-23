@@ -36,15 +36,17 @@ export default class Show extends Component {
                 </h5>
                 <h1 className="py-2">{this.props.data.data.current.temp_f}&deg;</h1>
 
-                H: {(this.props.data.data.forecast.forecastday[0].day.maxtemp_f)} <br /><br />
-                L: {(this.props.data.data.forecast.forecastday[0].day.mintemp_f)}
+                H: {(this.props.data.data.forecast.forecastday[0].day.maxtemp_f)}&deg; <br /><br />
+                L: {(this.props.data.data.forecast.forecastday[0].day.mintemp_f)}&deg;
 
                 <h4 className="py-3">{this.props.data.data.current.condition.text} </h4>
                 <img className="py-3" src={this.props.data.data.current.condition.icon} ></img><br/>
+                
                 <Link className="link" to="/">Home Page</Link>
 
             </div>
             <ForecastComp forecast={this.props.data.data}/>
+            <img className='map' src={'https://maps.googleapis.com/maps/api/staticmap?center=' + this.props.data.data.location.name + '&zoom=13&size=600x300&maptype=roadmap&key=AIzaSyCMM3EoaAbPMk-kIdKQevo6VPZvNMDvQM8'} ></img>
         </div>
     )
     }
