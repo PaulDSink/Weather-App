@@ -1,0 +1,16 @@
+.forecastcontainer{
+    border: solid;
+    border-color: red;
+    color: black;
+    /* display: flex; */
+    align-content: space-between;
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+}
+.forecast{
+    border: solid;
+    border-color: blue;
+    /* display: inline; */
+    
+}

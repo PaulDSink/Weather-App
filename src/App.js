@@ -16,7 +16,7 @@ export default class App extends Component {
       show: false,
       weather: [],
       forecast: '',
-      location: 'Chicago',
+      location: '',
        cities: [
         {
           name: 'New York City',

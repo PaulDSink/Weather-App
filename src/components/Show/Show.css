@@ -1,5 +1,6 @@
 .container{
     text-align: center;
+    
   }
 body{
   background-image: url("https://lh3.googleusercontent.com/proxy/xItfQNux8gqz4_DAU6WA1LNQdGCFDN-GbgtxuU8wGmum5d3xBjVll4uww6oH--IaxUaRxTYASCk-oNJkFzojkt0mKHTPTW2VH2b1cSboVzksK7R19MPeAKrheTxGZ2inKJMWwo2m");
@@ -12,6 +13,7 @@ body{
   font-weight:bold;
   vertical-align: middle;
   color: white;
+  
 }
 .cards{
   background-color: black;
