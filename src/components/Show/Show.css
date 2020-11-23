@@ -17,9 +17,25 @@ body{
 }
 .cards{
   background-color: black;
-  height: 600px;
+  height: 450px;
+  width: 350px;
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 10px;
   padding: 20px;
-  margin-top: 50px;
+  margin-top: 20px;
+  margin-left: 100px ;
+}
+.homepage-button{
+  margin-top: 30px;
+}
+p {
+  color: white;
+}
+
+p:hover {
+  cursor: pointer;
+}
+.minMax{
+  align-content: space-between;
+  display: inline-block;
 }
