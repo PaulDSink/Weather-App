@@ -25,16 +25,17 @@ body{
   margin-top: 20px;
   margin-left: 100px ;
 }
-.homepage-button{
-  margin-top: 30px;
-}
-p {
+
+.link {
+  padding: 5px 15px;
   color: white;
+  text-decoration: none;
+  border-radius: 10px;
 }
 
-p:hover {
+.link:hover {
   cursor: pointer;
-}
+
 .minMax{
   align-content: space-between;
   display: inline-block;
