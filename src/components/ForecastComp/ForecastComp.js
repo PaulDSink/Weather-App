@@ -23,7 +23,7 @@ export default class ForecastComp extends Component{
                 
 
             <h4 className="py-3">{this.props.forecast.forecast.forecastday[index].day.condition.text} </h4>
-            <img className="py-3" src={this.props.forecast.forecast.forecastday[index].day.condition.icon}></img>
+            <img className="py-4" src={this.props.forecast.forecast.forecastday[index].day.condition.icon}></img>
             </div>
 
             </div>

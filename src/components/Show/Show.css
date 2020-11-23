@@ -13,6 +13,7 @@ body{
   justify-content: flex-start;
   align-items: center;
   overflow-y: scroll;
+  box-shadow: 5px 5px 5px #8f8e8e;
 }
 
 .container::-webkit-scrollbar {
@@ -35,8 +36,8 @@ body{
   border-radius: 10px;
   font-size: 18px;
   font-weight: bold;
-  margin-top: 30px;
-  height: 25px;
+  margin-bottom: 15px;
+  height: -5px;
   width: 100px;
   background-color: rgba(0, 0, 0, 0.6);
 }
@@ -44,8 +45,8 @@ body{
 .link:hover {
   cursor: pointer;
 }
-
-.minMax{
-  align-content: space-between;
-  display: inline-block;
+.map{
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #8f8e8e;
 }
