@@ -42,12 +42,14 @@ export default class Show extends Component {
                 <h4 className="py-3">{this.props.data.data.current.condition.text} </h4>
                 <img className="py-3" src={this.props.data.data.current.condition.icon} ></img><br/>
                 
-                <Link className="link" to="/">Home Page</Link>
 
             </div>
             <ForecastComp forecast={this.props.data.data}/>
             <img className='map' src={'https://maps.googleapis.com/maps/api/staticmap?center=' + this.props.data.data.location.name + '&zoom=13&size=600x300&maptype=roadmap&key=AIzaSyCMM3EoaAbPMk-kIdKQevo6VPZvNMDvQM8'} ></img>
+            <Link className="link" to="/">Home Page</Link>
+
         </div>
+        
     )
     }
 }

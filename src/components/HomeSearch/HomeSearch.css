@@ -2,13 +2,19 @@
     margin-left: 20px;
 }
 .citySearch{
-    margin-left: -100px;
+    margin-left: -5px;
     font-size: 20px;
 }
 .search{
     margin-left: 20px;
     border-radius: 8px;
+    width: 200px;
 }
 button:hover {
     cursor: pointer;
+  }
+  .myButton{
+      font-size: 13px;
+      border-radius: 8px;
+      margin-left: 10px;
   }
