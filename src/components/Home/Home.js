@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {Route, Link, Switch, Redirect} from 'react-router-dom'
+import './Home.css';
 import HomeSearch from '../HomeSearch/HomeSearch'
 
 export default class Home extends Component {
@@ -8,7 +9,7 @@ export default class Home extends Component {
         const cityList = this.props.cities.map((city)=>{
             return (
 
-                <Link to="/show/">
+                <Link className="list-item" to="/show/">
                     <p className="city" onClick={this.props.updateLocation}>{city.name}, {city.state}</p>
 
                  {/* <Link to={"/show/" + city.name.split(' ').join('_')}>
@@ -21,9 +22,9 @@ export default class Home extends Component {
             <div className="Home">
                 <HomeSearch location={this.props.location} inputUpdated={this.props.inputUpdated} getWeather={this.props.getWeather}/>
                 <h3>Popular Cities:</h3>
-                <ul className="city-list">
+                <div className="city-list">
                     {cityList}
-                </ul>
+                </div>
             </div>
         )
     }
