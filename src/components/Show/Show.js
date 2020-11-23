@@ -45,7 +45,9 @@ export default class Show extends Component {
 
             </div>
             <ForecastComp forecast={this.props.data.data}/>
+            <img className='map' src={'https://maps.googleapis.com/maps/api/staticmap?center=' + this.props.data.data.location.name + '&zoom=13&size=600x300&maptype=roadmap&key=AIzaSyCMM3EoaAbPMk-kIdKQevo6VPZvNMDvQM8'} ></img>
             <Link className="link" to="/">Home Page</Link>
+
         </div>
         
     )
