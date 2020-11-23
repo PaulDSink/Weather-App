@@ -70,7 +70,7 @@ updateLocation =(name)=>{
 }
 
 ipLocation = async()=>{
-  let response = await axios.get('http://api.ipstack.com/check?access_key=4416074be02a3f366a5b359db25a2260')
+  let response = await axios.get('https://api.ipgeolocation.io/ipgeo?apiKey=25b4efee1bfe40a28d0e03652fded5dd')
   console.log(response.data.city)
   console.log('ip')
 
@@ -93,7 +93,7 @@ getWeather = async()=>{
     console.log(response)
     
   }else {
-    let response = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=383bba998c9840e5b57160359201911&q=${this.state.location}&days=7`);
+    let response = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=383bba998c9840e5b57160359201911&q=${this.state.location.split(" ").join("_")}&days=7`);
     this.setState({weather: response});
     console.log(response)
   }
@@ -113,11 +113,6 @@ getWeather = async()=>{
               <Home cities={this.state.cities} inputUpdated={this.inputUpdated} getWeather={this.getWeather} updateLocation={this.updateLocation}/> }/>
             <Route exact path="/show" render={props=>
             <Show data={this.state.weather} getWeather={this.getWeather}/> }/>
-{/* 
-               <Home cities={this.state.cities} location={this.state.location} inputUpdated={this.inputUpdated} getWeather={this.getWeather}/> }/>
-             <Route exact path="/show/:city" render={props=>
-            <Show {...this.props} data={this.state.weather}/> }/> */}
-
           </Switch>
         </main>
         <Footer />
