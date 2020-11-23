@@ -15,7 +15,7 @@ export default class Show extends Component {
 
     render(){
         // console.log('show page')
-        // console.log(this.props)
+        console.log(this.props)
         const minmaxTemp=(min,max) => {
             return(
                 <h3>
@@ -36,12 +36,13 @@ export default class Show extends Component {
                 </h5>
                 <h1 className="py-2">{this.props.data.data.current.temp_f}&deg;</h1>
 
-                {minmaxTemp(this.props.data.data.forecast.forecastday[0].day.maxtemp_f,
-                this.props.data.data.forecast.forecastday[0].day.mintemp_f)}
+                H: {(this.props.data.data.forecast.forecastday[0].day.maxtemp_f)} <br /><br />
+                L: {(this.props.data.data.forecast.forecastday[0].day.mintemp_f)}
 
                 <h4 className="py-3">{this.props.data.data.current.condition.text} </h4>
                 <img className="py-3" src={this.props.data.data.current.condition.icon} ></img><br/>
                 <Link className="link" to="/">Home Page</Link>
+
             </div>
             <ForecastComp forecast={this.props.data.data}/>
         </div>

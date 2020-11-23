@@ -16,6 +16,8 @@ export default class App extends Component {
     this.state = {
       show: false,
       weather: [],
+      iplocation: '',
+      ipweather: [],
       forecast: '',
       location: '',
        cities: [
@@ -55,7 +57,9 @@ export default class App extends Component {
     this.inputUpdated = this.inputUpdated.bind(this);
   }
 componentDidMount = ()=>{
+  this.ipLocation();
   this.getWeather();
+  
 };
 updateLocation =(name)=>{
   console.log(name.target.innerHTML)
@@ -63,6 +67,14 @@ updateLocation =(name)=>{
   this.setState({ location: city })
   this.getWeather();
   console.log(this.state.weather)
+}
+
+ipLocation = async()=>{
+  let response = await axios.get('http://api.ipstack.com/check?access_key=4416074be02a3f366a5b359db25a2260')
+  console.log(response.data.city)
+  console.log('ip')
+
+  this.setState({iplocation: response.data.city})
 }
 
 inputUpdated(event){
@@ -84,6 +96,9 @@ getWeather = async()=>{
     this.setState({weather: response});
     console.log(response)
   }
+  let ipweather = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=383bba998c9840e5b57160359201911&q=${this.state.iplocation}&days=7`);
+  this.setState({ipweather: ipweather})
+  console.log(ipweather)
   }
 
   render() {
