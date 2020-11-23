@@ -15,7 +15,7 @@ export default class Show extends Component {
 
     render(){
         // console.log('show page')
-        // console.log(this.props)
+        console.log(this.props)
         const minmaxTemp=(min,max) => {
             return(
                 <h3>
