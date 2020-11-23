@@ -13,7 +13,7 @@ export default class ForecastComp extends Component{
         return(
             <div className='forecastcontainer'>
                 <div className='day'>
-            <h1>{this.props.forecast.forecast.forecastday[index].date.toString()}</h1>
+            <h1 className="date">{this.props.forecast.forecast.forecastday[index].date.toString()}</h1>
                 {/* <h5 className="py-4">
                     <i className={`wi ${this.props.weatherIcon}`}></i>
                 </h5> */}
