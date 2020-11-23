@@ -36,8 +36,8 @@ export default class Show extends Component {
                 </h5>
                 <h1 className="py-2">{this.props.data.data.current.temp_f}&deg;</h1>
 
-                H: {(this.props.data.data.forecast.forecastday[0].day.maxtemp_f)}&deg; <br /><br />
-                L: {(this.props.data.data.forecast.forecastday[0].day.mintemp_f)}&deg;
+                High: {(this.props.data.data.forecast.forecastday[0].day.maxtemp_f)}&deg; <br /><br />
+                Low: {(this.props.data.data.forecast.forecastday[0].day.mintemp_f)}&deg;
 
                 <h4 className="py-3">{this.props.data.data.current.condition.text} </h4>
                 <img className="py-3" src={this.props.data.data.current.condition.icon} ></img><br/>

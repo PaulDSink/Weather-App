@@ -7,8 +7,14 @@
     display: inline-block;
     height: 200px;
     width: 200px;
-    margin-top: 25px;
+    margin-top: 0px;
 }
 .date{
-    font-size: 18px;
+    font-size: 16px;
+}
+.py-2{
+    font-size: 20px;
+}
+.py-3{
+    margin-top: 0px;
 }
