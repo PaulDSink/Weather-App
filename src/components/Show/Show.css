@@ -1,5 +1,6 @@
 .container{
     text-align: center;
+    
   }
 body{
   background-image: url("https://mcdn.wallpapersafari.com/medium/1/77/suAMgq.jpeg");
@@ -12,6 +13,7 @@ body{
   font-weight:bold;
   vertical-align: middle;
   color: white;
+  
 }
 .cards{
   background-color: black;

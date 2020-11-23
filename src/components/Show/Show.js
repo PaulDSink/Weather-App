@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {Route, Link, Switch, Redirect} from 'react-router-dom'
 import './Show.css'
+import ForecastComp from '../ForecastComp/ForecastComp'
 
 export default class Show extends Component {
     constructor() {
@@ -13,8 +14,8 @@ export default class Show extends Component {
     
 
     render(){
-        console.log('show page')
-        console.log(this.props)
+        // console.log('show page')
+        // console.log(this.props)
         const minmaxTemp=(min,max) => {
             return(
                 <h3>
@@ -42,6 +43,7 @@ export default class Show extends Component {
                 <img className="py-3" src={this.props.data.data.current.condition.icon} ></img>
                 <Link to="/">Home Page</Link>
             </div>
+            <ForecastComp forecast={this.props.data.data}/>
         </div>
     )
     }
