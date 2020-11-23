@@ -29,6 +29,6 @@ export default class ForecastComp extends Component{
             </div>
         )
     })
-    return <div className= 'forecast'>{forecast}</div>
+    return <div className="forecast">{forecast}</div>
     }
 }
