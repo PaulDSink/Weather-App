@@ -3,9 +3,11 @@
 }
 .citySearch{
     margin-left: -100px;
+    font-size: 20px;
 }
 .search{
     margin-left: 20px;
+    border-radius: 8px;
 }
 button:hover {
     cursor: pointer;
