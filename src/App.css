@@ -8,6 +8,9 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  background-image: url("https://mcdn.wallpapersafari.com/medium/1/77/suAMgq.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 main {
