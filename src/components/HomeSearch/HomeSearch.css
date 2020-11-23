@@ -7,3 +7,6 @@
 .search{
     margin-left: 20px;
 }
+button:hover {
+    cursor: pointer;
+  }

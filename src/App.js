@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import {Route, Link, Switch, Redirect} from 'react-router-dom'
-// import './App.css';
+import './App.css';
 import Home from './components/Home/Home'
 import Header from './components/Header/Header'
 import Show from './components/Show/Show'
+import Footer from './components/Footer/Footer'
 import axios from 'axios'
 import 'weather-icons/css/weather-icons.min.css'
 import HomeSearch from './components/HomeSearch/HomeSearch';
@@ -103,6 +104,7 @@ getWeather = async()=>{
 
           </Switch>
         </main>
+        <Footer />
       </div>
     );
   }

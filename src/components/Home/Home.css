@@ -1,11 +1,13 @@
+
 .Home {
-    width: 100vw;
+    width: 100%;
     height: 100%;
+    
 }
 
 .city-list {
     width: 100%;
-    height: 100%;
+    max-height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -15,7 +17,6 @@
 
 .list-item {
     text-align: center;
-    /* padding: 0 10px; */
     width: 30%;
     margin: 15px 0;
     text-decoration: none;
@@ -23,10 +24,10 @@
     border-radius: 10px;
 }
 
-p {
+.city {
     color: white;
 }
 
-p:hover {
+.city:hover {
     cursor: pointer;
 }

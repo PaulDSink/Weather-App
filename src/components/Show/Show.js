@@ -40,8 +40,8 @@ export default class Show extends Component {
                 this.props.data.data.forecast.forecastday[0].day.mintemp_f)}
 
                 <h4 className="py-3">{this.props.data.data.current.condition.text} </h4>
-                <img className="py-3" src={this.props.data.data.current.condition.icon} ></img>
-                <Link to="/">Home Page</Link>
+                <img className="py-3" src={this.props.data.data.current.condition.icon} ></img><br/>
+                <Link className="link" to="/">Home Page</Link>
             </div>
             <ForecastComp forecast={this.props.data.data}/>
         </div>

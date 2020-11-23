@@ -7,7 +7,7 @@ export default class Header extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="Header">
         <h1>Weather App</h1>
         {/* <nav>
           <ul>
