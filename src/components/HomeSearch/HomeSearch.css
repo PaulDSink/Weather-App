@@ -21,9 +21,9 @@ button:hover {
   } 
   .Search-bar{
       display: flex;
-      margin-left: -280px;
-      margin-bottom: -22px;
+      text-align: center;
       border-radius: 5px;
       font-size: 20px;
+      margin-left: 90px;
   }
  
