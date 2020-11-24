@@ -8,6 +8,7 @@ import Footer from './components/Footer/Footer'
 import axios from 'axios'
 import 'weather-icons/css/weather-icons.min.css'
 import HomeSearch from './components/HomeSearch/HomeSearch';
+import backgroundImages from './BackgroundImages';
 
 
 export default class App extends Component {
@@ -56,10 +57,12 @@ export default class App extends Component {
       ],
     }
     this.inputUpdated = this.inputUpdated.bind(this);
+    // this.backgroundImage = this.backgroundImage.bind(this);
   }
 componentDidMount = ()=>{
   this.ipLocation();
   this.getWeather();
+  
   
   
 };
@@ -68,14 +71,20 @@ updateLocation =(name)=>{
   let city = name.target.innerHTML;
   this.setState({ location: city })
   this.getWeather();
-  console.log(this.state.weather)
+  // console.log(this.state.weather)
   
 }
-
+// backgroundImage(){
+//   let currentCode = this.state.ipweather.data.current.condition.code;
+//   console.log(currentCode);
+//   var currentPic = backgroundImages.find(function (code) {return code.code === currentCode});
+//   console.log(backgroundImages);
+//   // this.setState({backgroundPic: currentPic});
+// }
 ipLocation = async()=>{
   let response = await axios.get('https://api.ipgeolocation.io/ipgeo?apiKey=25b4efee1bfe40a28d0e03652fded5dd')
-  console.log(response.data.city)
-  console.log('ip')
+  // console.log(response.data.city)
+  // console.log('ip')
   this.setState({iplocation: response.data.city})
   this.getWeather();
   
@@ -83,32 +92,33 @@ ipLocation = async()=>{
 
 inputUpdated(event){
   const value = event.target.value;
-  console.log(value)
+  // console.log(value)
 
   this.setState({ location: value})
-  console.log(this.state.location)
+  // console.log(this.state.location)
 }
 
 
 getWeather = async()=>{
   if(this.state.location === ''){
-    let response = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=383bba998c9840e5b57160359201911&q=new_York&days=7`);
+    let response = await axios.get(`https://api.weatherapi.com/v1/forecast.json?key=383bba998c9840e5b57160359201911&q=new_York&days=7`);
     this.setState({weather: response});
     console.log(response)
     
   }else {
 
-    let response = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=383bba998c9840e5b57160359201911&q=${this.state.location.split(" ").join("_")}&days=7`);
+    let response = await axios.get(`https://api.weatherapi.com/v1/forecast.json?key=383bba998c9840e5b57160359201911&q=${this.state.location.split(" ").join("_")}&days=7`);
     this.setState({weather: response});
     console.log(response)
   }
-  let ipweather = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=383bba998c9840e5b57160359201911&q=${this.state.iplocation}&days=7`);
+  let ipweather = await axios.get(`https://api.weatherapi.com/v1/forecast.json?key=383bba998c9840e5b57160359201911&q=${this.state.iplocation}&days=7`);
   this.setState({ipweather: ipweather})
   console.log(ipweather)
+  // this.backgroundImage();
   }
 
   render() {
-    console.log(this.state.backgroundPic)
+    // console.log(this.state.backgroundPic)
     return (
       <div className="App" style={{ backgroundImage: `url('${this.state.backgroundPic}')`}}>
         <Header />
