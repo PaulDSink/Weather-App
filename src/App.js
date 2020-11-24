@@ -16,6 +16,7 @@ export default class App extends Component {
     this.state = {
       show: false,
       weather: [],
+      backgroundPic: 'https://mcdn.wallpapersafari.com/medium/1/77/suAMgq.jpeg',
       iplocation: '',
       ipweather: [],
       forecast: '',
@@ -107,8 +108,9 @@ getWeather = async()=>{
   }
 
   render() {
+    console.log(this.state.backgroundPic)
     return (
-      <div className="App">
+      <div className="App" style={{ backgroundImage: `url('${this.state.backgroundPic}')`}}>
         <Header />
         <main>
           <Switch>

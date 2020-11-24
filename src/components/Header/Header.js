@@ -6,11 +6,12 @@ import './Header.css';
 export default class Header extends Component {
 
   render() {
-    let time = new Date().toLocaleTimeString();
+    let time = new Date();
+    let newTime = time.toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'});
     
     return (
       <div className="Header">
-        <h1>Weather App at {time}</h1>
+        <h1>Weather App at {newTime}</h1>
         
         {/* <nav>
           <ul>
