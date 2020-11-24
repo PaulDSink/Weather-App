@@ -4,3 +4,25 @@
     font-family: Arial Black;
     font-size: 22px;
 }
+.div{
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    position: relative;
+    animation-name: div;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    color: black;
+    border-radius: 10px;
+    text-align: left;
+    margin-left: -600px;
+    margin-top: -70px;
+}
+@keyframes div {
+    0%   {background-color:white; left:0px; top:0px;}
+    25%  {background-color:blue; left:50px; top:0px;}
+    50%  {background-color:white; left:50px; top:50px;}
+    75%  {background-color:blue; left:0px; top:50px;}
+    100% {background-color:white; left:0px; top:0px;}
+  }
