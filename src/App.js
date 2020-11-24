@@ -60,6 +60,7 @@ componentDidMount = ()=>{
   this.ipLocation();
   this.getWeather();
   
+  
 };
 updateLocation =(name)=>{
   console.log(name.target.innerHTML)
