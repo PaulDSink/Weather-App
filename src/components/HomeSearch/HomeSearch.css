@@ -4,17 +4,26 @@
 .citySearch{
     margin-left: -5px;
     font-size: 20px;
-}
+} 
 .search{
-    margin-left: 20px;
-    border-radius: 8px;
-    width: 200px;
-}
+    border-radius: 0px;
+    width: 450px;
+    font-size: 18px;
+    border-radius: 5px;
+} 
 button:hover {
     cursor: pointer;
+} 
+ .myButton{
+      font-size: 19px;
+      border-radius: 0px;
+      border-radius: 5px;
+  } 
+  .Search-bar{
+      display: flex;
+      margin-left: -280px;
+      margin-bottom: -22px;
+      border-radius: 5px;
+      font-size: 20px;
   }
-  .myButton{
-      font-size: 13px;
-      border-radius: 8px;
-      margin-left: 10px;
-  }
+ 
