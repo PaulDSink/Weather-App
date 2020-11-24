@@ -1,10 +1,21 @@
 .Header{
+    width: 100%;
     text-align: center;
     height: 140px;
     font-family: Arial Black;
     font-size: 22px;
+    display: grid;
+    grid-template-columns: 100px 1fr 100px;
+    grid-template-rows: 140px;
+}
+
+.Header h2 {
+    grid-column: 2;
+    grid-row: 1;
 }
 .div{
+    grid-column: 1;
+    grid-row: 1;
     width: 100px;
     height: 100px;
     background-color: white;
@@ -16,8 +27,8 @@
     color: black;
     border-radius: 10px;
     text-align: left;
-    margin-left: -600px;
-    margin-top: -70px;
+    margin-left: 25px;
+    margin-top: 25px;
 }
 @keyframes div {
     0%   {background-color:white; left:0px; top:0px;}
