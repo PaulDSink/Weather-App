@@ -17,8 +17,8 @@ export default class ForecastComp extends Component{
                 {/* <h5 className="py-4">
                     <i className={`wi ${this.props.weatherIcon}`}></i>
                 </h5> */}
-            <h1 className="py-2">High: {this.props.forecast.forecast.forecastday[index].day.maxtemp_f}&deg;</h1>
-            <h1 className="py-2">Low: {this.props.forecast.forecast.forecastday[index].day.mintemp_f}&deg;</h1>
+            <h2 className="py-5">H: {this.props.forecast.forecast.forecastday[index].day.maxtemp_f}&deg;</h2>
+            <h2 className="py-5">L: {this.props.forecast.forecast.forecastday[index].day.mintemp_f}&deg;</h2>
 
                 
 

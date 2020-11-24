@@ -13,7 +13,6 @@ body{
   justify-content: flex-start;
   align-items: center;
   overflow-y: scroll;
-  box-shadow: 5px 5px 5px #8f8e8e;
 }
 
 .container::-webkit-scrollbar {
@@ -48,5 +47,9 @@ body{
 .map{
   margin: 10px;
   border-radius: 10px;
-  box-shadow: 5px 5px 5px #8f8e8e;
+  box-shadow: 5px 5px 5px #888888;
+}
+.py-9{
+  margin-top: 0px;
+  height: 100px;
 }

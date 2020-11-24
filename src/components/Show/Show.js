@@ -31,16 +31,18 @@ export default class Show extends Component {
         <div className="container">
             <div className="cards">
                 <h1>{this.props.data.data.location.name}, {this.props.data.data.location.region}</h1>
-                <h5 className="py-4">
-                    <i className={`wi ${this.props.weatherIcon}`}></i>
-                </h5>
+
                 <h1 className="py-2">{this.props.data.data.current.temp_f}&deg;</h1>
 
-                High: {(this.props.data.data.forecast.forecastday[0].day.maxtemp_f)}&deg; <br /><br />
-                Low: {(this.props.data.data.forecast.forecastday[0].day.mintemp_f)}&deg;
+                H: {(this.props.data.data.forecast.forecastday[0].day.maxtemp_f)}&deg; 
+                &nbsp; &nbsp; &nbsp; &nbsp; 
+                L: {(this.props.data.data.forecast.forecastday[0].day.mintemp_f)}&deg;
+                <br /><br />
+                Feels Like: {(this.props.data.data.current.feelslike_f)}&deg;
+                <br /><br />
 
                 <h4 className="py-3">{this.props.data.data.current.condition.text} </h4>
-                <img className="py-3" src={this.props.data.data.current.condition.icon} ></img><br/>
+                <img className="py-9" src={this.props.data.data.current.condition.icon} ></img>
                 
 
             </div>
