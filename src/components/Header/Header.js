@@ -11,8 +11,8 @@ export default class Header extends Component {
     
     return (
       <div className="Header">
-        <h1>Weather App at {newTime}</h1>
-        
+        <h1>current time: {newTime}</h1>
+        <div className="div">The Weather Apppp</div>
         {/* <nav>
           <ul>
             <li>HOME</li>
