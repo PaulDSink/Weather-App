@@ -75,11 +75,10 @@ ipLocation = async()=>{
   let response = await axios.get('https://api.ipgeolocation.io/ipgeo?apiKey=25b4efee1bfe40a28d0e03652fded5dd')
   console.log(response.data.city)
   console.log('ip')
-
-  
+  this.setState({iplocation: response.data.city})
+  this.getWeather();
   
 }
-
 
 inputUpdated(event){
   const value = event.target.value;
@@ -118,6 +117,8 @@ getWeather = async()=>{
               <Home cities={this.state.cities} inputUpdated={this.inputUpdated} getWeather={this.getWeather} updateLocation={this.updateLocation}/> }/>
             <Route exact path="/show" render={props=>
             <Show data={this.state.weather} getWeather={this.getWeather}/> }/>
+            <Route exact path="/show/current" render={props=>
+            <Show data={this.state.ipweather} getWeather={this.getWeather}/> }/>
           </Switch>
         </main>
         <Footer />
