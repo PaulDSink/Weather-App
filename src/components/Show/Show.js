@@ -26,8 +26,6 @@ export default class Show extends Component {
             )
         }
         
-
-
     return (
         <div className="container">
             <div className="cards">
@@ -42,7 +40,7 @@ export default class Show extends Component {
                 Feels Like: {(this.props.data.data.current.feelslike_f)}&deg;
                 <br /><br />
 
-                <h4 className="py-3">{this.props.data.data.current.condition.text} </h4>
+                <h4 className="py-8">{this.props.data.data.current.condition.text} </h4>
                 <img className="py-9" src={this.props.data.data.current.condition.icon} ></img>
                 
 
