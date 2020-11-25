@@ -8,7 +8,7 @@ Our weather app shows the current weather of any city the user types in and a 3 
 ## Project Links
 
 * [Github Repo](https://github.com/PaulDSink/Weather-App)
-* [Deployment]()
+* [Deployment](https://weather-app-sink-hovanec-azizi.herokuapp.com/)
 
 ## Approach  
 
@@ -31,17 +31,17 @@ When rendering the show page, the API request can take longer so the information
 
 ## Example  
 
-![Example]()
 Above is an example of the functionality of my application.
+![HomePage](./HomePage2.png)
+![HomePage](./HomePage1.png)
 
 ## Technologies Used  
 
 We used the following technologies on this project:
-
 * React
 * JavaScript
 * Axios
-* 
+* CSS 3
 
 ## Installation  
 
