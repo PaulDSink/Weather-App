@@ -32,7 +32,7 @@ export default class Show extends Component {
             <div className="cards">
                 <h1>{this.props.data.data.location.name}, {this.props.data.data.location.region}</h1>
 
-                <h1 className="py-2">{this.props.data.data.current.temp_f}&deg;</h1>
+                <div className="py-10"><h1 className="py-2">{this.props.data.data.current.temp_f}&deg;</h1></div>
 
                 H: {(this.props.data.data.forecast.forecastday[0].day.maxtemp_f)}&deg; 
                 &nbsp; &nbsp; &nbsp; &nbsp; 

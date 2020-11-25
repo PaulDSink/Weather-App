@@ -21,7 +21,7 @@ body{
 
 .cards{
   background-color: black;
-  max-height: 450px;
+  max-height: 480px;
   width: 350px;
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 10px;
@@ -53,4 +53,27 @@ body{
   margin-bottom: 100x;
   height: 100px;
   margin-top: -50px;
+}
+.py-2{
+  font-size: 60px;
+  height: 80px;
+  width: 145px;
+  background-color: rgba(191, 191, 191, 0.6);
+  color:white;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 10px 30px;
+  text-shadow: 3px 6px rgba(50, 50, 70, 0.2);
+  box-shadow: 3px 5px 5px rgba(255, 255, 255, 0.2);
+  font-size: 60px;
+}
+.py-8{
+  margin-top: 0px;
+  font-size: 40px;
+  text-shadow: 3px 5px 3px rgba(227, 227, 227, 0.2);
+}
+.py-10{
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }

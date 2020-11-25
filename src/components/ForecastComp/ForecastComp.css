@@ -12,31 +12,10 @@
 .date{
     font-size: 16px;
 }
-.py-2{
-    font-size: 60px;
-    display: flex;
-    height: 80px;
-    width: 105px;
-    background-color: rgba(191, 191, 191, 0.6);
-    color:white;
-    font-weight: bold;
-    text-align: center;
-    margin-left: 95px;
-    border-radius: 10px;
-    padding: 10px 30px;
-    text-shadow: 3px 6px rgba(50, 50, 70, 0.2);
-    box-shadow: 3px 5px 5px rgba(255, 255, 255, 0.2);
-    font-size: 60px;
-}
+
 .py-3{
     margin-top: 0px;
 }
 .py-4{
     height: 100px;
-}
-.py-8{
-    margin-top: 0px;
-    font-size: 40px;
-    text-shadow: 3px 5px 3px rgba(227, 227, 227, 0.2);
-
 }

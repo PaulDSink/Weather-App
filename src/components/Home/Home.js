@@ -20,7 +20,7 @@ export default class Home extends Component {
                 < Link className='ipweather' to={'/show/current'}>
                     <p>Your Current Weather</p>
                 </Link>
-                <h3>Popular Cities:</h3>
+                <h3> Popular Cities:</h3>
                 <div className="city-list">
                     {cityList}
                 </div>
