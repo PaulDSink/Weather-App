@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 import {Route, Link, Switch, Redirect} from 'react-router-dom'
-import './App.css';
+import './Footer.css';
 
-export default class App extends Component {
+
+export default class Footer extends Component {
 
   render() {
     return (
-      <div className="App">
-        <h1>App</h1>
+      <div className="Footer">
+        <h1>Created by Joe, Elham, and Paul</h1>
       </div>
     );
   }

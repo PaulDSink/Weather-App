@@ -1,0 +1,29 @@
+.search3{
+    margin-left: 20px;
+}
+.citySearch{
+    margin-left: -5px;
+    font-size: 20px;
+} 
+.search{
+    border-radius: 0px;
+    width: 450px;
+    font-size: 18px;
+    border-radius: 5px;
+} 
+button:hover {
+    cursor: pointer;
+} 
+ .myButton{
+      font-size: 19px;
+      border-radius: 0px;
+      border-radius: 5px;
+  } 
+  .Search-bar{
+      display: flex;
+      text-align: center;
+      border-radius: 5px;
+      font-size: 20px;
+      margin-left: 90px;
+  }
+ 

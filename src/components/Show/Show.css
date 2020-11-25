@@ -1,0 +1,56 @@
+body{
+  font-weight:bold;
+  vertical-align: middle;
+  color: white;
+}
+
+.container {
+  width: 100%;
+  max-height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-y: scroll;
+}
+
+.container::-webkit-scrollbar {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.cards{
+  background-color: black;
+  max-height: 450px;
+  width: 350px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.link {
+  padding: 5px 15px;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  height: -5px;
+  width: 100px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.link:hover {
+  cursor: pointer;
+}
+.map{
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #888888;
+}
+.py-9{
+  margin-bottom: 100x;
+  height: 100px;
+  margin-top: -50px;
+}
