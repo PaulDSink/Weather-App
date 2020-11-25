@@ -32,8 +32,8 @@ When rendering the show page, the API request can take longer so the information
 ## Example  
 
 Above is an example of the functionality of my application.
-![HomePage](./HomePage2.png)
 ![HomePage](./HomePage1.png)
+![HomePage](./HomePage2.png)
 
 ## Technologies Used  
 
