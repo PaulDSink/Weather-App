@@ -18,6 +18,7 @@ export default class App extends Component {
       show: false,
       weather: [],
       backgroundPic: 'https://mcdn.wallpapersafari.com/medium/1/77/suAMgq.jpeg',
+      backgroundPictures: backgroundImages,
       iplocation: '',
       ipweather: [],
       forecast: '',
@@ -57,11 +58,12 @@ export default class App extends Component {
       ],
     }
     this.inputUpdated = this.inputUpdated.bind(this);
-    // this.backgroundImage = this.backgroundImage.bind(this);
+    this.backgroundImage = this.backgroundImage.bind(this);
   }
 componentDidMount = ()=>{
   this.ipLocation();
   this.getWeather();
+  // this.backgroundImage();
   
   
   
@@ -71,16 +73,24 @@ updateLocation =(name)=>{
   let city = name.target.innerHTML;
   this.setState({ location: city })
   this.getWeather();
+  this.backgroundImage();
   // console.log(this.state.weather)
   
 }
-// backgroundImage(){
-//   let currentCode = this.state.ipweather.data.current.condition.code;
-//   console.log(currentCode);
-//   var currentPic = backgroundImages.find(function (code) {return code.code === currentCode});
-//   console.log(backgroundImages);
-//   // this.setState({backgroundPic: currentPic});
-// }
+backgroundImage(){
+  let currentCode = '';
+  if(this.state.location ===''){
+    currentCode = this.state.ipweather.data.current.condition.code;
+  }else{
+    currentCode = this.state.weather.data.current.condition.code;
+  }
+  // console.log(currentCode);
+  let currentPic = this.state.backgroundPictures.backgroundImages.find(function (condition) {return condition.code === currentCode});
+  // console.log(this.state.backgroundPictures);
+  console.log(currentPic)
+  console.log(this.state.location)
+  this.setState({backgroundPic: currentPic.image});
+}
 ipLocation = async()=>{
   let response = await axios.get('https://api.ipgeolocation.io/ipgeo?apiKey=25b4efee1bfe40a28d0e03652fded5dd')
   // console.log(response.data.city)
@@ -114,7 +124,7 @@ getWeather = async()=>{
   let ipweather = await axios.get(`https://api.weatherapi.com/v1/forecast.json?key=383bba998c9840e5b57160359201911&q=${this.state.iplocation}&days=7`);
   this.setState({ipweather: ipweather})
   console.log(ipweather)
-  // this.backgroundImage();
+  this.backgroundImage();
   }
 
   render() {
@@ -130,7 +140,7 @@ getWeather = async()=>{
             <Route exact path="/show" render={props=>
             <Show data={this.state.weather} getWeather={this.getWeather}/> }/>
             <Route exact path="/show/current" render={props=>
-            <Show data={this.state.ipweather} getWeather={this.getWeather}/> }/>
+            <Show data={this.state.ipweather} getWeather={this.getWeather} backgroundImage={this.backgroundImage}/> }/>
           </Switch>
         </main>
         <Footer />

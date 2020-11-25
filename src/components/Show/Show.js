@@ -10,6 +10,7 @@ export default class Show extends Component {
     }
     componentWillMount = async() => {
         this.props.getWeather()
+        
     }
     
 
