@@ -32,8 +32,8 @@ When rendering the show page, the API request can take longer so the information
 ## Example  
 
 Above is an example of the functionality of my application.
-![HomePage](./HomePage1.png)
-![HomePage](./HomePage2.png)
+![HomePage](./HomePage-1.png)
+![HomePage](./HomePage-2.png)
 
 ## Technologies Used  
 
@@ -43,9 +43,6 @@ We used the following technologies on this project:
 * Axios
 * CSS 3
 
-## Installation  
-
- 
 
 ## Contribution  
 
