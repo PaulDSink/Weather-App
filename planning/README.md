@@ -20,14 +20,14 @@ For MVP, we wanted to create a home page with links for large U.S. cities and a 
 
 ### Post MVP  
 
-For post MVP, we wanted to work on cleaning up our styling and add a three day forecast as well as a map feature to our show page.
+For post MVP, we wanted to work on cleaning up our styling and add a three day forecast as well as a map feature to our show page. The static map feature is easily integrable using the Google Maps API which is then adjusted to the location of the weather. Additionally, we wanted to add functionality that would use your IP to enable a current location weather forecast. In order to to do this we used the API at https://api.ipgeolocation.io. 
 
 ### Unsolved Problems  
 
 When rendering the show page, the API request can take longer so the information on the page changes once the API request is finished. Also, sometimes the API request doesn't complete and the information rendered on the show page is the last city searched instead of the current city.
 
 ### Wireframe  
-
+![Wireframe](./wireframe.png)
 
 ## Example  
 

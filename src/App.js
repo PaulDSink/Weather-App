@@ -89,6 +89,7 @@ backgroundImage(){
   // console.log(this.state.backgroundPictures);
   console.log(currentPic)
   console.log(this.state.location)
+  
   this.setState({backgroundPic: currentPic.image});
 }
 ipLocation = async()=>{
